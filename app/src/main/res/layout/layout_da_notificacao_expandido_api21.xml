@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Large Text"
+        android:id="@+id/ntextonotificatitulo21"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/nimageView21" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nimageView21"
+        android:src="@drawable/icone_notificacao"
+        android:background="@drawable/circulo_api21"
+        android:layout_margin="8dp"
+        android:padding="7dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/ntextnotifcontraido21"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/ntextonotificatitulo21"
+        android:layout_toRightOf="@+id/nimageView21" />
+
+</RelativeLayout>

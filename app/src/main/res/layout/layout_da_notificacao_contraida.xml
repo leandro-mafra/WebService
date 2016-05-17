@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textonotificatitulo"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/icone_notificacao"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:padding="20dp"
+        android:background="#6c8282ff"
+        android:layout_marginRight="3dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textnotifcontraido"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_below="@+id/textonotificatitulo" />
+
+</RelativeLayout>
