@@ -27,13 +27,14 @@ public class Conexao {
     private HttpURLConnection conn;
 
     public Conexao(){}
+    private String ip = "http://192.168.0.105:8080/";
 
     public String Conec(String metodo, int id, byte[] outputbytearray, String jsonOut, String referencia, boolean news) throws MalformedURLException, IOException, JSONException {
         URL url;
         StringBuilder json = new StringBuilder();
 
         if(metodo.equals("get")){
-            String get = "http://192.168.0.105:8080/WebServiceAppMaven/json/app/get";
+            String get = ip+"WebServiceAppMaven/json/app/get";
             url =  new URL(get);
             conn = null;
             conn = (HttpURLConnection) url.openConnection();
@@ -51,7 +52,7 @@ public class Conexao {
             }
             conn.connect();
         }else if(metodo.equals("post")){
-            String post = "http://192.168.0.105:8080/WebServiceAppMaven/json/app/post";
+            String post = ip+"WebServiceAppMaven/json/app/post";
             url =  new URL(post);
             conn = null;
             conn = (HttpURLConnection) url.openConnection();
@@ -78,7 +79,7 @@ public class Conexao {
             conn.disconnect();
 
             if(news){
-                post = "http://192.168.0.105:8080/WebServiceAppMaven/pandroidima/"+outputbytearray.length+"/"+referencia;
+                post = ip+"WebServiceAppMaven/pandroidima/"+outputbytearray.length+"/"+referencia;
                 url =  new URL(post);
                 conn = null;
                 conn = (HttpURLConnection) url.openConnection();
@@ -102,7 +103,7 @@ public class Conexao {
                 conn.disconnect();
             }
         }else if(metodo.equals("del")){
-            String del = "http://192.168.0.105:8080/WebServiceAppMaven/json/app/del";
+            String del = ip+"WebServiceAppMaven/json/app/del";
             url =  new URL(del);
             JSONObject jo = new JSONObject();
             JSONArray ja = new JSONArray();
@@ -138,7 +139,7 @@ public class Conexao {
 
             conn.disconnect();
         }else if(metodo.equals("salva")){
-            String post = "http://192.168.0.105:8080/WebServiceAppMaven/json/app/salva";
+            String post = ip+"WebServiceAppMaven/json/app/salva";
             url =  new URL(post);
             conn = null;
             conn = (HttpURLConnection) url.openConnection();
@@ -165,7 +166,7 @@ public class Conexao {
             conn.disconnect();
 
             if(news){
-                post = "http://192.168.0.105:8080/WebServiceAppMaven/pandroidima/"+outputbytearray.length+"/"+referencia;
+                post = ip+"WebServiceAppMaven/pandroidima/"+outputbytearray.length+"/"+referencia;
                 url =  new URL(post);
                 conn = null;
                 conn = (HttpURLConnection) url.openConnection();
@@ -228,7 +229,7 @@ public class Conexao {
         Bitmap ima = null;
         HttpURLConnection co = null;
         try{
-            URL url = new URL("http://192.168.0.105:8080/WebServiceAppMaven/androidima/"+id);
+            URL url = new URL(ip+"WebServiceAppMaven/androidima/"+id);
             co = (HttpURLConnection) url.openConnection();
             co.setUseCaches(false);
             co.setDoInput(true);

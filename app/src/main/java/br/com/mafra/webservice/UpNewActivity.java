@@ -263,7 +263,6 @@ public class UpNewActivity extends AppCompatActivity {
                         while (corri || cont < 2){
                             corri = false;
                             cont++;
-                            System.out.println("jijijijijijijijijijijijijijijij");
                             Conexao cx = new Conexao();
                             try {
                                 cx.Conec("salva", id, OutPutByteArray, jsonOut, referencia, news);
