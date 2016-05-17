@@ -27,7 +27,7 @@ public class Conexao {
     private HttpURLConnection conn;
 
     public Conexao(){}
-    private String ip = "http://192.168.0.105:8080/";
+    private String ip = "http://192.168.0.105:8080/"; // endereço do servidor
 
     public String Conec(String metodo, int id, byte[] outputbytearray, String jsonOut, String referencia, boolean news) throws MalformedURLException, IOException, JSONException {
         URL url;
